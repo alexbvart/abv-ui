@@ -2,27 +2,49 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+  /* CSS Reset */
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Esto asegura que las fuentes y otros estilos sean consistentes */
+  body {
+    font-family: 'Arial', sans-serif; /* Puedes cambiar esto a la fuente que prefieras */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Asegura que los elementos de contenedor tengan el ancho completo */
+  html, body, #root {
+    height: 100%;
+    width: 100%;
+  }
 
 .pink-bg {
   background-color: #ff69b4; /* Ejemplo de estilo personalizado */
   color: #ffffff;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.color-white{
+  color: white;
+}
 
 @keyframes logo-spin {
   from {
@@ -39,10 +61,19 @@
   }
 }
 
-.card {
-  padding: 2em;
+.custom-card{
+  width: 300px;
+  max-width: 350px;
+  height: 450px;
 }
 
-.read-the-docs {
-  color: #888;
+.custom-card2{
+  width: 400px;
+  max-width: 350px;
+  height: 600;
+}
+.flex-row{
+  display: flex;
+  /* justify-content: center; */
+  align-items: start;
 }

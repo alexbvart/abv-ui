@@ -40,20 +40,20 @@ function App() {
     setSelectedValues(selected);
   };
   const handleClose = () => {
-    alert('Notification closed');
+    alert("Notification closed");
   };
 
-  const showToast = ({ type, message, content}: AddToastParams )=> {
-    addToast({type, message, content});
+  const showToast = ({ type, message, content }: AddToastParams) => {
+    addToast({ type, message, content });
   };
   return (
     <Container>
-      <AbvButton  
-        label="Hola" 
-        // size='large' 
-        // type='primary' 
-        onClick={() => alert('Button clicked!')} 
-        className='pink-bg'
+      {/* <AbvButton
+        label="Hola"
+        // size='large'
+        // type='primary'
+        onClick={() => alert("Button clicked!")}
+        className="pink-bg"
       />
 
       <AbvMultiSelectDropdown
@@ -75,7 +75,7 @@ function App() {
         <AbvAccordion.Item title="Section 3">
           This is the content for section 3.
         </AbvAccordion.Item>
-      </AbvAccordion>
+      </AbvAccordion> */}
 
       {/* <AbvAbvNotificationItem message="Alexander" type="error"/> */}
 
@@ -108,7 +108,7 @@ function App() {
         <AbvNotification.Content>Here is some information.</AbvNotification.Content>
       </AbvNotification> */}
 
-      <button onClick={() => showToast( 
+      {/* <button onClick={() => showToast( 
         { type: 'custom', 
           content: 
             <AbvNotification type="info" onClose={handleClose}>
@@ -126,32 +126,65 @@ function App() {
           <AbvNotification.Icon>✅</AbvNotification.Icon>
           <AbvNotification.Content>Operation completed successfully!</AbvNotification.Content>
         </AbvNotification>
-      })}>Show Warning Toast</button>
-    
-    <Card style={{ maxWidth: "300px" }}>
-    <Card.Header>
-      <Card.Title>Titulo del Card</Card.Title>
-      <Card.Subtitle>Subtítulo del Card</Card.Subtitle>
-    </Card.Header>
-    <Card.Image 
-      image="https://images.unsplash.com/photo-1718002127392-92a7eef514ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8https://example.com/image.jpg" 
-      alt="Descripción de la imagen" 
-      imagePosition="full"
-    />
-    <Card.Content>
-      <p>Contenido del card...</p>
-    </Card.Content>
-    <Card.Footer>
-      <AbvButton  
-        label="Hola" 
-        // size='large' 
-        // type='primary' 
-        onClick={() => alert('Button clicked!')} 
-        className='pink-bg'
-      />
-      <button>Acción 2</button>
-    </Card.Footer>
-  </Card>
+      })}>Show Warning Toast</button> */}
+
+      <Card className="custom-card">
+        <Card.Header>
+          <Card.Title>Thibault Mokuenko </Card.Title>
+          <Card.Subtitle>Disponible para contratación</Card.Subtitle>
+        </Card.Header>
+        <Card.Content>
+          <p>Contenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del card...</p>
+        </Card.Content>
+        <Card.Image
+          image="https://images.unsplash.com/photo-1718267586715-c484519893d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D"
+          alt="Descripción de la imagen"
+          imagePosition="center"
+          isFull
+        />
+        <Card.Footer>
+          <AbvButton label="Descargar" size="medium" className="pink-bg" />
+        </Card.Footer>
+      </Card>
+
+      <Card className="custom-card color-white">
+        <Card.Image
+          image="https://images.unsplash.com/photo-1718486182950-88d67ee8d734?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Descripción de la imagen"
+          imagePosition="center"
+          isFull
+        />
+        <Card.Footer className="flex-col">
+          <Card.Subtitle className="uppercase">
+            Disponible para contratación
+          </Card.Subtitle>
+          <Card.Title>Chris Reyem</Card.Title>
+          <p>Publicado hace 21 horas</p>
+        </Card.Footer>
+      </Card>
+
+
+      <Card className="custom-card2">
+        <Card.Image
+          image="https://plus.unsplash.com/premium_photo-1676998428469-acbb6b41fa8f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Descripción de la imagen"
+          imagePosition="top"
+          
+        />
+        <Card.Header className="flex-col">
+          <Card.Subtitle className="uppercase">
+            Servicio preventivo
+          </Card.Subtitle>
+          <Card.Title>Manteniemiendo </Card.Title>
+        </Card.Header>
+        <Card.Content className="">
+          <p>Invierte en prevención</p>
+        </Card.Content>
+        <Card.Footer>
+          <AbvButton label="Conoce más" size="medium" className="pink-bg" />
+        </Card.Footer>
+      </Card>
+
     </Container>
   );
 }

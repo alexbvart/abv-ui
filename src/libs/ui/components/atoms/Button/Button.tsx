@@ -8,6 +8,7 @@ const StyledButton = styled.button<{ type: ButtonProps['type']; size: ButtonProp
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  border-radius:  8px;
 
    &.btn-primary {
      background-color: #007bff;
