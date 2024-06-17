@@ -1,0 +1,15 @@
+.input_field_container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+    box-shadow: 0px 8px 28px 0px rgba(13, 25, 133, 0.16);
+
+    &:focus-within {
+      border-color: var(--color-active);
+    }
+  }

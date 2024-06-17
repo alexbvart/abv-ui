@@ -1,0 +1,31 @@
+.input-field-container.inputField {
+    border-radius: 80px;
+  }
+
+.inputField {
+    border-radius: 80px !important;
+  }
+  
+
+.custom_tab_style{
+    flex: 1;
+    height: 60px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: none;
+    font-size: 14px;
+    background: rgb(148, 98, 98);
+    color: black;
+  border-bottom: 3px solid transparent;
+
+    
+    /* border-radius: 16px;  */
+
+}
+.active{
+      border-bottom-color: blue;
+      color: blue; 
+       background: rgb(55, 128, 0); 
+  border-bottom: 3px solid transparent;
+
+}

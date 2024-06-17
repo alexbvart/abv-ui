@@ -1,34 +1,13 @@
 // InputField.tsx
 import { FC, ReactNode, InputHTMLAttributes } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
+import style from './InputField.module.css';
 
 // Styled Components
-const InputWrapper = styled.div<{ hasIcon: boolean }>`
+const InputWrapper = styled.div<{ hasIcon: boolean}>`
   display: flex;
   flex-direction: column;
   width: 100%;
-
-  .input-field-container {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 8px;
-    background-color: #fff;
-    transition: border-color 0.3s;
-    box-shadow: 0px 8px 28px 0px rgba(13, 25, 133, 0.16);
-
-    ${({ hasIcon }) =>
-      hasIcon &&
-      css`
-        padding-left: 40px;
-      `}
-
-    &:focus-within {
-      border-color: var(--color-active);
-    }
-  }
 `;
 
 // Individual Styled Components
@@ -57,7 +36,8 @@ const StyledIcon = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 20px;
-  color: var(--color-active);
+  /* color: var(--color-active); */
+  color : var(--color-text-base);
   width: 24px;
   height: 100%;
   cursor: pointer;
@@ -73,6 +53,7 @@ interface InputFieldProps {
   label?: string;
   icon?: ReactNode;
   children: ReactNode;
+  className?: string;
 }
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {}
@@ -87,11 +68,11 @@ interface IconProps {
 }
 
 // Components
-export const InputField: FC<InputFieldProps> & FieldComponents = ({ label, icon, children }) => {
+export const InputField: FC<InputFieldProps> & FieldComponents = ({ label, icon, children, className }) => {
   return (
-    <InputWrapper hasIcon={!!icon} className="input-field-wrapper">
+    <InputWrapper hasIcon={!!icon} >
       {label && <div className="input-label">{label}</div>}
-      <div className="input-field-container">
+      <div className={`${style.input_field_container} ${className}`}>
         {icon && <div className="input-icon">{icon}</div>}
         {children}
       </div>

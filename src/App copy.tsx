@@ -15,6 +15,7 @@ import { Menubar } from "./libs/ui/components/atoms/MenuBar";
 import { Tabs } from "./libs/ui/components/organism/Tabs";
 import { Breadcrumb } from "./libs/ui/components/organism/BreadCrum";
 import { InputField } from "./libs/ui/components/organism/InputField";
+import { PhoneMock } from "./libs/ui/components/organism/PhoneView";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -158,6 +159,9 @@ function App() {
           <AbvButton label="Descargar" size="medium" className="pink-bg" />
         </Card.Footer>
       </Card>
+      <PhoneMock >
+        s
+      </PhoneMock>
 
       {/* <Menubar>
         <Menubar.Menu>

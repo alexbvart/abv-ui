@@ -24,9 +24,18 @@
   }
 
   /* Asegura que los elementos de contenedor tengan el ancho completo */
-  html, body, #root {
+  html{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+
+  }
+   body, #root {
     height: 100%;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
 .pink-bg {
@@ -110,4 +119,31 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   &.active {
   color: white;
     background: rgb(55, 128, 0);
+}}
+
+.flex{
+  display: flex;
+}
+
+.input-field-container.inputField {
+  border-radius: 80px;
+}
+
+
+.airbnb-tab{
+  flex: 1;
+  height: 60px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: none;
+  font-size: 14px;
+  background: white;
+  color: black;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  &.active {
+    border-bottom-color: black;
 }}
