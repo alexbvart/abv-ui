@@ -14,6 +14,7 @@ import { AbvButton } from "./libs/ui/components/atoms/Button";
 import { Menubar } from "./libs/ui/components/atoms/MenuBar";
 import { Tabs } from "./libs/ui/components/organism/Tabs";
 import { Breadcrumb } from "./libs/ui/components/organism/BreadCrum";
+import { InputField } from "./libs/ui/components/organism/InputField";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -158,7 +159,7 @@ function App() {
         </Card.Footer>
       </Card>
 
-      <Menubar>
+      {/* <Menubar>
         <Menubar.Menu>
           <Menubar.Trigger>File</Menubar.Trigger>
           <Menubar.Content>
@@ -174,7 +175,7 @@ function App() {
             <Menubar.Item>Print</Menubar.Item>
           </Menubar.Content>
         </Menubar.Menu>
-      </Menubar>
+      </Menubar> */}
 
       <Tabs initialActiveTab={0}>
         <Tabs.List>
@@ -189,7 +190,7 @@ function App() {
         </Tabs.Panels>
       </Tabs>
 
-      <Breadcrumb>
+      {/* <Breadcrumb>
     <Breadcrumb.List>
       <Breadcrumb.Item>
         <Breadcrumb.Link href="/">Home</Breadcrumb.Link>
@@ -203,7 +204,12 @@ function App() {
         <Breadcrumb.Page>Breadcrumb.</Breadcrumb.Page>
       </Breadcrumb.Item>
     </Breadcrumb.List>
-  </Breadcrumb>
+  </Breadcrumb> */}
+
+  <InputField label="Search" >
+    <InputField.Input placeholder="Type here..." />
+    <InputField.Icon><p>L</p></InputField.Icon>
+  </InputField>
 
 
       {/* <Card className="custom-card color-white">

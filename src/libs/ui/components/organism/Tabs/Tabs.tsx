@@ -26,12 +26,12 @@ const TabButton = styled.button<{ isActive: boolean, className?: string }>`
     console.log(props.isActive, props.className)
     return props.className !== 'active'
       ? css`
-          color: black;
-          border-bottom-color: transparent;
+          color: var(--color-text-base);
+          border-bottom-color: var(--color-transparent);
         ` 
       : css`
-          color: ${(props.isActive ? '#007aff' : '#000')};
-          border-bottom-color: ${(props.isActive ? '#007aff' : 'transparent')};
+          color: ${(props.isActive ? 'var(--color-active)' : 'var(--color-text-base)')};
+          border-bottom-color: ${(props.isActive ? 'var(--color-active)'  : 'var(--color-trasnparent)' )};
         `
   }}
   &:hover {
