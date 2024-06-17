@@ -16,8 +16,14 @@ export interface ToastProps {
     duration?: number;
   };
   
+  export type AddToasRendertParams = {
+    render?: ReactNode;
+    duration?: number;
+  };
+
   export  type ToastContextType = {
     addToast: (params :AddToastParams) => void;
+    addToastRender: (params :AddToasRendertParams) => void;
   };
   
   export type ToastStateType = {

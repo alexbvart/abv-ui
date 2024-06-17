@@ -11,7 +11,13 @@ import { AbvNotification } from "./libs/ui/components/atoms/Notification";
 import { AddToastParams, useToast } from "./libs/ui/components/atoms/Toast";
 import { Card } from "./libs/ui/components/atoms/Card";
 import { AbvButton } from "./libs/ui/components/atoms/Button";
+import { Menubar } from "./libs/ui/components/atoms/MenuBar";
+import { Tabs } from "./libs/ui/components/organism/Tabs";
+import { Breadcrumb } from "./libs/ui/components/organism/BreadCrum";
+
 const Container = styled.div`
+  min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +39,10 @@ const Button = styled.button`
   }
 `;
 
+
 function App() {
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
-  const { addToast } = useToast();
+  const { addToast, addToastRender } = useToast();
   const handleChange = (selected: string[]) => {
     setSelectedValues(selected);
   };
@@ -108,25 +115,25 @@ function App() {
         <AbvNotification.Content>Here is some information.</AbvNotification.Content>
       </AbvNotification> */}
 
-      {/* <button onClick={() => showToast( 
-        { type: 'custom', 
-          content: 
+      {/* <button onClick={() => addToastRender( 
+        { render: 
             <AbvNotification type="info" onClose={handleClose}>
               <AbvNotification.Icon>ℹ️</AbvNotification.Icon>
-            <AbvNotification.Content>Here is some information.</AbvNotification.Content>
-      </AbvNotification>}
+              <AbvNotification.Content>Here is some information.</AbvNotification.Content>
+            </AbvNotification>}
       )}>
+
         Show Alexadner</button>
       <button onClick={() => showToast({type:'error', message: 'This is an error message!'})}>Show Error Toast</button>
       <button onClick={() => showToast({type:'info', message:'This is an info message!'})}>Show Info Toast</button>
       <button onClick={() => showToast({type:'warning', message:'This is a warning message!'})}>Show Warning Toast</button>
 
-      <button onClick={() => showToast({type:'custom', 
-          content: <AbvNotification type="success" onClose={handleClose}>
+      <button onClick={() => addToastRender({
+          render: <AbvNotification type="success" onClose={handleClose}>
           <AbvNotification.Icon>✅</AbvNotification.Icon>
           <AbvNotification.Content>Operation completed successfully!</AbvNotification.Content>
         </AbvNotification>
-      })}>Show Warning Toast</button> */}
+      })}>Show Warning Toast</button>  */}
 
       <Card className="custom-card">
         <Card.Header>
@@ -134,7 +141,11 @@ function App() {
           <Card.Subtitle>Disponible para contratación</Card.Subtitle>
         </Card.Header>
         <Card.Content>
-          <p>Contenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del cardContenido del card...</p>
+          <p>
+            Contenido del cardContenido del cardContenido del cardContenido del
+            cardContenido del cardContenido del cardContenido del cardContenido
+            del cardContenido del cardContenido del card...
+          </p>
         </Card.Content>
         <Card.Image
           image="https://images.unsplash.com/photo-1718267586715-c484519893d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D"
@@ -147,7 +158,55 @@ function App() {
         </Card.Footer>
       </Card>
 
-      <Card className="custom-card color-white">
+      <Menubar>
+        <Menubar.Menu>
+          <Menubar.Trigger>File</Menubar.Trigger>
+          <Menubar.Content>
+            <Menubar.Item>
+              New Tab <Menubar.Shortcut>⌘T</Menubar.Shortcut>
+            </Menubar.Item>
+            <Menubar.Item>New Window</Menubar.Item>
+            <Menubar.Separator />
+            <Menubar.Item>Share</Menubar.Item>
+            <Menubar.Item>Share</Menubar.Item>
+            <Menubar.Item>Share</Menubar.Item>
+            <Menubar.Separator />
+            <Menubar.Item>Print</Menubar.Item>
+          </Menubar.Content>
+        </Menubar.Menu>
+      </Menubar>
+
+      <Tabs initialActiveTab={0}>
+        <Tabs.List>
+          <Tabs.Tab index={0} className="new-tab">Home</Tabs.Tab>
+          <Tabs.Tab index={1}>Profile</Tabs.Tab>
+          <Tabs.Tab index={2} className="new-tab">Settings</Tabs.Tab>
+        </Tabs.List>
+        <Tabs.Panels>
+          <Tabs.Panel index={0}>Welcome to the Home page</Tabs.Panel>
+          <Tabs.Panel index={1}>Profile information here</Tabs.Panel>
+          <Tabs.Panel index={2}>Adjust your settings</Tabs.Panel>
+        </Tabs.Panels>
+      </Tabs>
+
+      <Breadcrumb>
+    <Breadcrumb.List>
+      <Breadcrumb.Item>
+        <Breadcrumb.Link href="/">Home</Breadcrumb.Link>
+      </Breadcrumb.Item>
+      <Breadcrumb.Separator />
+      <Breadcrumb.Item>
+        <Breadcrumb.Link href="/components">Components</Breadcrumb.Link>
+      </Breadcrumb.Item>
+      <Breadcrumb.Separator />
+      <Breadcrumb.Item>
+        <Breadcrumb.Page>Breadcrumb.</Breadcrumb.Page>
+      </Breadcrumb.Item>
+    </Breadcrumb.List>
+  </Breadcrumb>
+
+
+      {/* <Card className="custom-card color-white">
         <Card.Image
           image="https://images.unsplash.com/photo-1718486182950-88d67ee8d734?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Descripción de la imagen"
@@ -162,7 +221,6 @@ function App() {
           <p>Publicado hace 21 horas</p>
         </Card.Footer>
       </Card>
-
 
       <Card className="custom-card2">
         <Card.Image
@@ -183,8 +241,7 @@ function App() {
         <Card.Footer>
           <AbvButton label="Conoce más" size="medium" className="pink-bg" />
         </Card.Footer>
-      </Card>
-
+      </Card> */}
     </Container>
   );
 }

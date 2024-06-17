@@ -77,3 +77,34 @@
   /* justify-content: center; */
   align-items: start;
 }
+
+
+/* flex: 1;
+padding: 10px 15px;
+cursor: pointer;
+background: none;
+border: none;
+border-bottom: 3px solid transparent;
+font-size: 14px;
+color: ${({ isActive }) => (isActive ? '#007aff' : '#000')};
+border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')};
+&:hover {
+  background-color: #e0e0e0;
+} */
+
+
+.new-tab{
+  flex: 1;
+  height: 60px;
+  padding: 10px 15px;
+  cursor: pointer;
+  background: none;
+  font-size: 14px;
+  background: white;
+  color: black;
+  border-radius: 16px; 
+
+  &.active {
+  color: white;
+    background: rgb(55, 128, 0);
+}}

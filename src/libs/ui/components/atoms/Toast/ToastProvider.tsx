@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
 import styled from 'styled-components';
 import { AbvToast } from './Toast';
-import { AddToastParams, ToastContextType, ToastStateType } from './Toast.type';
+import { AddToasRendertParams, AddToastParams, ToastContextType, ToastStateType } from './Toast.type';
 
 
 
@@ -29,8 +29,17 @@ export const AbvToastProvider: React.FC<{ children: ReactNode }> = ({ children }
     }, duration);
   }, []);
 
+  const addToastRender = useCallback(({ render, duration = 5000 }: AddToasRendertParams ) => {
+    const id = Math.random().toString(36).substr(2, 9);
+    setToasts((prevToasts) => [...prevToasts, { id, type : "custom", message:"", content: render, duration }]);
+
+    setTimeout(() => {
+      setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id));
+    }, duration);
+  }, []);
+
   return (
-    <ToastContext.Provider value={{ addToast }}>
+    <ToastContext.Provider value={{ addToast, addToastRender }}>
       {children}
       <ToastsContainer>
         {toasts.map((toast) => {
