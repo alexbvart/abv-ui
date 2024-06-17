@@ -35,7 +35,7 @@ const StyledIcon = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  /* font-size: 20px; */
   /* color: var(--color-active); */
   color : var(--color-text-base);
   width: 24px;
@@ -65,6 +65,7 @@ interface LabelProps {
 interface IconProps {
   children: ReactNode;
   onClick?: () => void;
+  className?: string;
 }
 
 // Components
@@ -88,8 +89,8 @@ const Label: FC<LabelProps> = ({ children }) => {
   return <StyledLabel className="input-label">{children}</StyledLabel>;
 };
 
-const Icon: FC<IconProps> = ({ children, onClick}) => {
-  return <StyledIcon onClick={onClick} >{children}</StyledIcon>;
+const Icon: FC<IconProps> = ({ children, onClick, className}) => {
+  return <StyledIcon className={className} onClick={onClick} >{children}</StyledIcon>;
 };
 
 // Export components

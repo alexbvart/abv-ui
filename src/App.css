@@ -136,7 +136,7 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   padding: 10px 15px;
   cursor: pointer;
   background: none;
-  font-size: 14px;
+  font-size: 13px !important;
   background: white;
   color: black;
   border-bottom: 3px solid transparent;
@@ -147,3 +147,9 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   &.active {
     border-bottom-color: black;
 }}
+
+.stickyNavbar {
+  position: sticky;
+  top: 40px;
+  z-index: 100; /* This ensures the navbar stays on top of other elements */
+}

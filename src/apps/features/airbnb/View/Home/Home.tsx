@@ -11,6 +11,7 @@ import { Lupe } from "../../component/Icon";
 import styles from "./Home.module.css";
 
 const ContainerStyled = styled.div`
+  background-color: white;
   padding: 0px 16px 16px 16px;
 `;
 
@@ -21,9 +22,9 @@ export const AirbnbHomeView = () => {
 
   return (
     <PhoneMock>
-      <ContainerStyled>
+      <ContainerStyled className="stickyNavbar">
         <InputField className={styles.inputField}>
-          <InputField.Icon>
+          <InputField.Icon className={styles.icon_custom}>
             <Lupe />
           </InputField.Icon>
           <InputField.Input placeholder="¿A donde quieres ir?" />
@@ -31,7 +32,7 @@ export const AirbnbHomeView = () => {
       </ContainerStyled>
 
       <Tabs initialActiveTab={0}>
-        <Tabs.List>
+        <Tabs.List className="stickyNavbar">
           <Tabs.Tab index={0} className="airbnb-tab">
             <img
               src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg"
@@ -57,6 +58,24 @@ export const AirbnbHomeView = () => {
               src="https://a0.muscache.com/pictures/a4634ca6-1407-4864-ab97-6e141967d782.jpg"
             />
             Lago
+          </Tabs.Tab>
+          <Tabs.Tab index={3} className="airbnb-tab" disabled>
+            <img
+              src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
+              alt=""
+              width="24"
+              height="24"
+              />
+              Populares
+          </Tabs.Tab>
+          <Tabs.Tab index={4} className="airbnb-tab" disabled>
+            <img
+              src="https://a0.muscache.com/pictures/3271df99-f071-4ecf-9128-eb2d2b1f50f0.jpg"
+              alt=""
+              width="24"
+              height="24"
+              />
+              Minicasa
           </Tabs.Tab>
         </Tabs.List>
         <Tabs.Panels>

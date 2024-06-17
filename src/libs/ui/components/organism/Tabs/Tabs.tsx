@@ -19,9 +19,17 @@ const TabListWrapper = styled.div`
   display: flex;
   border-bottom: 1px solid #ddd;
   background-color: #f8f8f8;
+  scroll-snap-align: initial;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+
+  scrollbar-width: none; // Oculta la barra de desplazamiento en Firefox
+  &::-webkit-scrollbar {
+    display: none; // Oculta la barra de desplazamiento en Chrome, Safari y Edge
+  }
 `;
 
-const TabButton = styled.button<{ isActive: boolean; className?: string }>`
+const TabButton = styled.button<{ isActive: boolean; className?: string, disabled:boolean }>`
   flex: 1;
   padding: 10px 15px;
   cursor: pointer;
@@ -47,23 +55,15 @@ const TabButton = styled.button<{ isActive: boolean; className?: string }>`
     `;
   }}
 
-  /* 
   ${(props) => {
-    console.log(props.isActive, props.className);
-    return props.className !== "active"
-      ? css`
-          color: var(--color-text-base);
-          border-bottom-color: var(--color-transparent);
-        `
-      : css`
-          color: ${props.isActive
-            ? "var(--color-active)"
-            : "var(--color-text-base)"};
-          border-bottom-color: ${props.isActive
-            ? "var(--color-active)"
-            : "var(--color-trasnparent)"};
-        `;
-  }} */
+    if (props.disabled) {
+      return css`
+        color: var(--color-text-disabled);
+        cursor: not-allowed;
+      `;
+    }
+  }}
+
   &:hover {
     background-color: #e0e0e0;
   }
@@ -104,12 +104,14 @@ interface TabsProps {
 
 interface TabListProps {
   children: ReactNode;
+  className?: string;
 }
 
 interface TabProps {
   className?: string;
   children: ReactNode;
   index: number;
+  disabled?: boolean;
 }
 
 interface TabPanelsProps {
@@ -139,23 +141,25 @@ export const Tabs: FC<TabsProps> & TabsComponents = ({
   );
 };
 
-const TabList: FC<TabListProps> = ({ children }) => {
-  return <TabListWrapper>{children}</TabListWrapper>;
+const TabList: FC<TabListProps> = ({ children, className }) => {
+  return <TabListWrapper className={className}>{children}</TabListWrapper>;
 };
 
 const Tab: FC<TabProps & HTMLAttributes<HTMLButtonElement>> = ({
   children,
   index,
   className,
+  disabled=false,
   ...rest
 }) => {
   const { activeTab, onTabChange } = useTabsContext();
 
   return (
     <TabButton
-      className={clsx({ active: activeTab === index }, className)}
+      className={clsx({ active: activeTab === index }, className, { disabled: disabled })}
       isActive={activeTab === index}
       onClick={() => onTabChange(index)}
+      disabled={disabled}
       {...rest}
     >
       {children}
