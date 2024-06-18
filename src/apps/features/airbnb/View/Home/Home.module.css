@@ -56,3 +56,9 @@
 .icon_custom{
   margin-left: 8px !important;
 }
+
+.stickyNavbar {
+  position: sticky;
+  top: 40px;
+  z-index: 100; /* This ensures the navbar stays on top of other elements */
+}

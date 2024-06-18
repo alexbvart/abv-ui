@@ -2,6 +2,7 @@ import { RouteObject } from "react-router-dom";
 import { AppsMainLayout } from "../common/components/AppsLayout";
 import { routesAirbnb } from "./subroutes/routesAirbnb";
 import { routesTask } from "./subroutes/routesTask";
+import { routesMoto } from "./subroutes/routesMoto";
 
 export const AppsRoutes: RouteObject = {
   path: '/apps',
@@ -16,6 +17,10 @@ export const AppsRoutes: RouteObject = {
       path: 'task',
       children: routesTask,
     },
+    {
+      path: 'moto',
+      children: routesMoto
+    }
 
   ],
 };

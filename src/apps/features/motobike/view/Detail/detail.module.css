@@ -1,0 +1,35 @@
+.bike_view {
+  background: var(--bike-color);
+}
+
+.bike_bar_container {
+  width: 240px !important;
+  height: 60px !important;
+  transform: rotate(270deg) translateY(50%);
+  margin-top: 50px;
+  padding: 4px;
+  border-radius: 24px !important;
+}
+
+.bike_bar_fill {
+  border-radius: 34px 40px 40px 34px;
+  background-color: var(--color-text-base) !important;
+}
+
+.bike_bar_text {
+  transform: rotate(90deg) translateY(60%) translateX(-2%) !important;
+  font-size: 14px !important;
+  mix-blend-mode: luminosity;
+  color: whitesmoke !important;
+}
+
+
+.bike_custom_card{
+    border-radius: 24px !important;
+    flex: 1;
+}
+
+.card_info_container{
+    display: flex;
+    gap: 10px;
+}

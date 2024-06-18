@@ -2,14 +2,14 @@
 import React, { FC, ReactNode } from "react";
 import styled from "styled-components";
 
-// Estilos para el mock de iPhone 15
+// Estilos para el mock de iPhone 
 const PhoneContainer = styled.div`
   width: 390px; // Ancho ajustado del iPhone 15
   height: 644px; // Alto ajustado del iPhone 15
   border-radius: 34px; // Borde redondeado para simular el dispositivo
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); // Sombra para dar efecto de elevación
   overflow: hidden; // Ocultar desbordamientos para simular el borde de la pantalla
-  border: 16px solid #000; // Borde negro para simular el bisel del iPhone
+  border: 14px solid #000; // Borde negro para simular el bisel del iPhone
   background: white; // Fondo de la pantalla del dispositivo para evitar transparencia
   position: relative; // Para el notch y otros elementos
   margin: auto;

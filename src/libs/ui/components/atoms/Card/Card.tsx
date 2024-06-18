@@ -21,12 +21,6 @@ interface CompoundComponents {
 const StyledCard = styled.div`
   min-height: 300px;
   min-width: 300px;
-
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
@@ -35,7 +29,7 @@ const ContentContainer = styled.div`
   position: relative;
   padding: 16px;
   width: 100%;
-  min-height: max-content;
+  height: max-content;
   min-height: 300px;
   min-width: 300px;
   box-sizing: border-box;
@@ -43,6 +37,11 @@ const ContentContainer = styled.div`
   flex-direction: column;
   z-index: 1;
   gap: 4px;
+
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 // Componente funcional Card
 const Card: FC<CardProps> & CompoundComponents = ({
