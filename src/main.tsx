@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import './index.css'
-import { AbvToastProvider } from './libs/ui/components/atoms/Toast/ToastProvider.tsx'
-import App from './apps/app/App.tsx'
+import App from './apps/App/App.tsx'
+import { AbvToastProvider } from './libs/ui/components/atoms/index.ts'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
