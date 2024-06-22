@@ -67,7 +67,7 @@ const CloseButton = styled.button`
 `;
 
 // Types
-type NotificationType = 'success' | 'error' | 'warning' | 'info';
+export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 
 type NotificationProps = {
   type: NotificationType;

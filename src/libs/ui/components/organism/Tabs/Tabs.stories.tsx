@@ -2,12 +2,16 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { Tabs } from './Tabs';
 
-export default {
-  title: 'Components/Tabs',
+const meta : Meta<typeof Tabs> = {
+  title: 'Molecules/Tabs',
   component: Tabs,
-} as Meta;
+};
 
-const Template: StoryFn = () => (
+export default meta;
+
+type Story = StoryFn<typeof Tabs>;
+
+export const DefaultTab: Story = () => (
   <Tabs initialActiveTab={0}>
     <Tabs.List>
       <Tabs.Tab index={0}>Home</Tabs.Tab>
@@ -21,5 +25,7 @@ const Template: StoryFn = () => (
     </Tabs.Panels>
   </Tabs>
 );
+DefaultTab.args = {
+  initialActiveTab: 0,
+};
 
-export const Default = Template.bind({});

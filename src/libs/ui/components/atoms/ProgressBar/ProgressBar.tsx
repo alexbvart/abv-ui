@@ -10,14 +10,12 @@ export const ProgressBarContainer = styled.div`
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
-
 `;
 
 export const ProgressBarFillStyled = styled.div<{ percentage: number }>`
   background-color: var(--color-active);
   width: ${(props) => props.percentage}%;
   height: 100%;
-  /* position: absolute;   */
 `;
 
 export const PercentageTextStyled = styled.div`
@@ -38,7 +36,7 @@ export const PercentageTextStyled = styled.div`
   text-align: center;
 `;
 
-interface ProgressBarProps {
+export interface ProgressBarProps {
   fill: number;
   children?: React.ReactNode;
   className?: string;

@@ -1,7 +1,7 @@
 // Menubar.tsx
-import React, { FC, ReactNode } from 'react';
-import styled from 'styled-components';
-import clsx from 'clsx';
+import React, { FC, ReactNode } from "react";
+import styled from "styled-components";
+import clsx from "clsx";
 
 // Styled Components
 const MenubarWrapper = styled.div`
@@ -60,13 +60,13 @@ const Shortcut = styled.span`
 `;
 
 interface MenubarComponents {
-    Menu: FC<MenubarMenuProps>;
-    Trigger: FC<MenubarTriggerProps>;
-    Content: FC<MenubarContentProps>;
-    Item: FC<MenubarItemProps>;
-    Separator: FC;
-    Shortcut: FC<MenubarShortcutProps>;
-  }
+  Menu: FC<MenubarMenuProps>;
+  Trigger: FC<MenubarTriggerProps>;
+  Content: FC<MenubarContentProps>;
+  Item: FC<MenubarItemProps>;
+  Separator: FC;
+  Shortcut: FC<MenubarShortcutProps>;
+}
 
 // Component Interfaces
 interface MenubarProps {
@@ -120,9 +120,9 @@ const MenubarShortcut: FC<MenubarShortcutProps> = ({ children }) => (
   <Shortcut>{children}</Shortcut>
 );
 
-    Menubar.Menu = MenubarMenu;
-    Menubar.Trigger = MenubarTrigger;
-    Menubar.Content = MenubarContent;
-    Menubar.Item = MenubarItem;
-    Menubar.Separator = MenubarSeparator;
-    Menubar.Shortcut = MenubarShortcut;
+Menubar.Menu = MenubarMenu;
+Menubar.Trigger = MenubarTrigger;
+Menubar.Content = MenubarContent;
+Menubar.Item = MenubarItem;
+Menubar.Separator = MenubarSeparator;
+Menubar.Shortcut = MenubarShortcut;

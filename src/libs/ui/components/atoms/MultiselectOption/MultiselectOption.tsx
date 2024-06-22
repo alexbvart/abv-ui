@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
+import { Input } from '../Input';
 
 // Styled components for custom styling
 const DropdownContainer = styled.div`
@@ -47,6 +48,7 @@ const SearchInput = styled.input`
   border: none;
   border-bottom: 1px solid #ccc;
   outline: none;
+  box-sizing: border-box;
 
   &:focus {
     border-bottom: 1px solid dodgerblue;
@@ -96,11 +98,11 @@ export const AbvMultiSelectDropdown: React.FC<MultiSelectDropdownProps> = ({
           <SelectedItem key={value}>{value}</SelectedItem>
         ))}
       </SelectedItemsContainer>
-      <SearchInput
+      <Input
         type="text"
         placeholder="Search..."
         value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>)   => setSearchTerm(e.target.value)}
       />
       <OptionListContainer>
         {filteredOptions.map(option => (

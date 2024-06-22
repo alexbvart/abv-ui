@@ -3,12 +3,13 @@ import { AppsMainLayout } from "../common/components/AppsLayout";
 import { routesAirbnb } from "./subroutes/routesAirbnb";
 import { routesTask } from "./subroutes/routesTask";
 import { routesMoto } from "./subroutes/routesMoto";
+import { HomeMain } from "../apps/features/home/view/Home";
 
 export const AppsRoutes: RouteObject = {
   path: '/apps',
   element: <AppsMainLayout />,
   children: [
-    // { index: true, path: 'inicio', element: <Home /> },
+    { index: true, path: '', element: <HomeMain /> },
     {
       path: 'airbnb',
       children: routesAirbnb,

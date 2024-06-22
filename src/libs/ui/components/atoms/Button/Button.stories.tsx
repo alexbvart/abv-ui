@@ -1,63 +1,56 @@
-import { Meta, StoryFn } from '@storybook/react';
-import { ButtonProps } from './Button.types';
+import { Meta, StoryObj } from '@storybook/react';
 import { AbvButton } from './Button';
 
-
-export default {
-  title: 'Components/Button',
+const meta = {
+  title: 'Atoms/Button',
   component: AbvButton,
-  argTypes: {
-    type: {
-      control: {
-        type: 'select',
-        options: ['primary', 'secondary', 'danger']
-      }
-    },
-    size: {
-      control: {
-        type: 'select',
-        options: ['small', 'medium', 'large']
-      }
-    },
-    disabled: {
-      control: 'boolean'
-    },
-    className: {
-      control: 'text' // Para permitir la entrada de clases CSS personalizadas
-    }
+} satisfies Meta<typeof AbvButton>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+
+export const Primary : Story = {
+  args: {
+    label: 'Primary Button',
+    type: 'primary',
   }
-} as Meta;
-
-const Template: StoryFn<ButtonProps> = (args:ButtonProps) => <AbvButton {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  label: 'Primary Button',
-  type: 'primary',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Secondary Button',
-  type: 'secondary',
+export const Secondary : Story = {
+  args: {
+    label: 'Secondary Button',
+    type: 'secondary',
+  }
 };
 
-export const Danger = Template.bind({});
-Danger.args = {
-  label: 'Danger Button',
-  type: 'danger',
+export const Danger : Story = {
+  args: {
+    label: 'Danger Button',
+    type: 'danger',
+  }
 };
 
-export const Disabled = Template.bind({});
-Disabled.args = {
-  label: 'Disabled Button',
-  type: 'primary',
-  disabled: true,
+export const Disabled : Story = {
+  args: {
+    label: 'Disabled Button',
+    type: 'primary',
+    disabled: true,
+  }
 };
 
-export const CustomClass = Template.bind({});
-CustomClass.args = {
-  label: 'Custom Class Button',
-  type: 'primary',
-  className: 'my-custom-class' // Clase CSS personalizada
+export const Small : Story = {
+  args: {
+    label: 'Small Button',
+    type: 'primary',
+    size: 'small',
+  }
+};
+
+export const Custom : Story = {
+  args: {
+    label: 'Custom Class Button',
+    type: 'primary',
+    className: 'pink-bg'
+  }
 };

@@ -6,15 +6,15 @@ import {
   AbvOption,
 } from "./libs/ui/components/atoms/MultiselectOption";
 import { useState } from "react";
-import { AbvAccordion } from "./libs/ui/components/atoms/Accordion";
+import { AbvAccordion } from "./libs/ui/components/molecules/Accordion";
 import { AbvNotification } from "./libs/ui/components/atoms/Notification";
 import { AddToastParams, useToast } from "./libs/ui/components/atoms/Toast";
-import { Card } from "./libs/ui/components/atoms/Card";
+import { Card } from "./libs/ui/components/molecules/Card";
 import { AbvButton } from "./libs/ui/components/atoms/Button";
-import { Menubar } from "./libs/ui/components/atoms/MenuBar";
+import { Menubar } from "./libs/ui/components/molecules/MenuBar";
 import { Tabs } from "./libs/ui/components/organism/Tabs";
 import { Breadcrumb } from "./libs/ui/components/organism/BreadCrum";
-import { InputField } from "./libs/ui/components/organism/InputField";
+import { InputField } from "./libs/ui/components/atoms/InputField";
 import { PhoneMock } from "./libs/ui/components/organism/PhoneView";
 
 const Container = styled.div`

@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { Breadcrumb } from './BreadCrum';
 
 export default {
-  title: 'Components/Breadcrumb.',
+  title: 'molecules/Breadcrumb.',
   component: Breadcrumb,
 } as Meta;
 

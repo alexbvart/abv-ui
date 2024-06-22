@@ -47,7 +47,8 @@ export const AbvButton: React.FC<ButtonProps> = ({
     type, 
     size = 'medium', 
     disabled = false,
-    className = ''
+    className = '',
+    children,
 }) => {
     
     return (
@@ -58,7 +59,7 @@ export const AbvButton: React.FC<ButtonProps> = ({
         disabled={disabled}
         className={clsx( className, type && `btn-${type}`, `btn-${size}`, )} 
       >
-        {label}
+        {label || children}
       </StyledButton>
     );
   };

@@ -46,7 +46,7 @@ export const BikeCard = ({
 }: BikeCardProps) => {
   const navigate = useNavigate();
   const navigateToDetail = () => {
-    navigate("detail", {
+    navigate("moto/detail", {
       state: {
         image,
         model,
