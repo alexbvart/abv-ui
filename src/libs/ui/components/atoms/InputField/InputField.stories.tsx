@@ -10,6 +10,10 @@ const meta: Meta<typeof InputField> = {
   args: {
     label: 'Username',
   },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -19,8 +23,7 @@ type Story = StoryObj<typeof InputField>;
 // Historia básica con solo la etiqueta y el campo de entrada
 export const PasswordInput: Story = {
   render: (args) => (
-    <InputField >
-      <InputField.Label>{args.label}</InputField.Label>
+    <InputField label={args.label}>
       <InputField.Input placeholder="Enter your username" type='password'/>
     </InputField>
   ),
@@ -34,8 +37,8 @@ export const PasswordInput: Story = {
 export const DisabledInput: Story = {
   render: (args) => (
     <InputField label={args.label} icon={<p>9</p>} disabled>
+      <InputField.Icon><LupeIcon/></InputField.Icon>
       <InputField.Input placeholder="Disabled input" disabled /> 
-      <InputField.Icon><LupeIcon/> </InputField.Icon>
     </InputField>
   ),
   args: {
@@ -48,6 +51,7 @@ export const SearchField: Story = {
   render: (args) => (
     <InputField label={args.label} icon={<p>5</p>}>
       <InputField.Input placeholder="Search..." />
+      <InputField.Icon><LupeIcon/></InputField.Icon>
     </InputField>
   ),
   args: {

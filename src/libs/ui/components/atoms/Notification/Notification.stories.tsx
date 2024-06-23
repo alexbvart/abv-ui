@@ -1,13 +1,25 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { AbvNotification } from "./Notification";
+import { AbvButton } from "../Button";
 
 // Componente de Storybook para AbvNotification
 const meta: Meta<typeof AbvNotification> = {
   title: "organism/Notification",
   component: AbvNotification,
-    args: {
-        type: "success",
+  args: {
+    type: "success",
+  },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    type: {
+        type: 'string',
+        options: ["success", "error", "warning", "info"],
     },
+  },
+    
 };
 
 export default meta;
@@ -22,7 +34,7 @@ export const SuccessNotification: Story = () => (
       This is a success notification.
     </AbvNotification.Content>
     <AbvNotification.Actions>
-      <button onClick={() => alert("Action clicked")}>Action</button>
+      <AbvButton onClick={() => alert("Action clicked")}>Action</AbvButton>
     </AbvNotification.Actions>
   </AbvNotification>
 );
@@ -38,7 +50,7 @@ export const ErrorNotification: Story = () => (
       This is an error notification.
     </AbvNotification.Content>
     <AbvNotification.Actions>
-      <button onClick={() => alert("Action clicked")}>Action</button>
+      <AbvButton onClick={() => alert("Action clicked")}>Action</AbvButton>
     </AbvNotification.Actions>
   </AbvNotification>
 );
@@ -54,7 +66,7 @@ export const WarningNotification: Story = () => (
       This is a warning notification.
     </AbvNotification.Content>
     <AbvNotification.Actions>
-      <button onClick={() => alert("Action clicked")}>Action</button>
+      <AbvButton onClick={() => alert("Action clicked")}>Action</AbvButton>
     </AbvNotification.Actions>
   </AbvNotification>
 );
@@ -70,7 +82,7 @@ export const InfoNotification: Story = () => (
       This is an info notification.
     </AbvNotification.Content>
     <AbvNotification.Actions>
-      <button onClick={() => alert("Action clicked")}>Action</button>
+      <AbvButton onClick={() => alert("Action clicked")}>Action</AbvButton>
     </AbvNotification.Actions>
   </AbvNotification>
 );

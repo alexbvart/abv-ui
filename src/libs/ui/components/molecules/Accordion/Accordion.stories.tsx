@@ -4,6 +4,9 @@ import { AbvAccordion } from "./Accordion";
 const meta: Meta<typeof AbvAccordion> = {
   title: "Molecules/Accordion",
   component: AbvAccordion,
+  parameters: {
+  },
+  tags: ['autodocs'],
 } satisfies Meta<typeof AbvAccordion>;
 
 export default meta;

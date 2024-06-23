@@ -14,6 +14,10 @@ const meta: Meta<typeof Sheet> = {
 //     Footer: Sheet.Footer,
 //     Close: Sheet.Close,
 //   },
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

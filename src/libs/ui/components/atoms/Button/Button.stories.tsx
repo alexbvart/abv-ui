@@ -4,6 +4,11 @@ import { AbvButton } from './Button';
 const meta = {
   title: 'Atoms/Button',
   component: AbvButton,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+
 } satisfies Meta<typeof AbvButton>;
 
 export default meta;

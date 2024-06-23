@@ -10,6 +10,10 @@ const meta: Meta<typeof Card> = {
     children: { control: 'text' },
     className: { control: 'text' },
   },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

@@ -14,6 +14,10 @@ const meta: Meta<typeof AbvMultiSelectDropdown> = {
   argTypes: {
     onChange: { action: "changed" },
   },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

@@ -15,8 +15,14 @@ const meta: Meta<typeof ProgressBar> ={
         min: 0,
         max: 100,
       },
+      description: 'Valor porcentual',
+      defaultValue: 50,
     },
   },
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
  
 export default meta;

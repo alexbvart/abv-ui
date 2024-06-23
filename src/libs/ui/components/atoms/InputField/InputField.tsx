@@ -159,5 +159,5 @@ const Icon: FC<IconProps> = ({ children, onClick, className }) => {
 
 // Export components
 (InputField.Input = Input),
-  (InputField.Label = Label),
-  (InputField.Icon = Icon);
+(InputField.Label = Label),
+(InputField.Icon = Icon);

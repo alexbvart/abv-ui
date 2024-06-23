@@ -11,6 +11,10 @@ const meta: Meta<typeof AbvToast> = {
     duration: 5000,
     onClose: () => alert('Toast closed'), // acción simulada para Storybook
   },
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

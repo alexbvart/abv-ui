@@ -13,7 +13,8 @@ export const ProgressBarContainer = styled.div`
 `;
 
 export const ProgressBarFillStyled = styled.div<{ percentage: number }>`
-  background-color: var(--color-active);
+  /* background-color: var(--color-active); */
+  background-color: #007aff;
   width: ${(props) => props.percentage}%;
   height: 100%;
 `;

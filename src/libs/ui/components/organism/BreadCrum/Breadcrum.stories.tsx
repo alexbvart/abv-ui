@@ -4,6 +4,10 @@ import { Breadcrumb } from './BreadCrum';
 export default {
   title: 'molecules/Breadcrumb.',
   component: Breadcrumb,
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ['autodocs'],
 } as Meta;
 
 const Template: StoryFn = () => (

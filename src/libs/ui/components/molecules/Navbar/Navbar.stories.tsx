@@ -11,6 +11,10 @@ const meta: Meta<typeof Navbar> = {
 //     Item: Navbar.Item,
 //     Separator: Navbar.Separator,
 //   },
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

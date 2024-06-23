@@ -10,6 +10,10 @@ import { Input } from '../Input';
 const meta: Meta = {
   title: 'Organism/ToastHook',
   component: AbvToastProvider,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

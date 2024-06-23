@@ -5,6 +5,10 @@ import { Tabs } from './Tabs';
 const meta : Meta<typeof Tabs> = {
   title: 'Molecules/Tabs',
   component: Tabs,
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ['autodocs'],
 };
 
 export default meta;

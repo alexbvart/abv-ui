@@ -7,6 +7,10 @@ const meta: Meta<typeof Table> = {
   title: 'Atoms/Table',
   component: Table,
   args: {},
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
 //   subcomponents: {
 //     Head: Table.Head,
 //     Body: Table.Body,

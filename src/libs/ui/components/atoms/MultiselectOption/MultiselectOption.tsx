@@ -1,6 +1,5 @@
 import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
-import clsx from 'clsx';
 import { Input } from '../Input';
 
 // Styled components for custom styling
@@ -11,6 +10,7 @@ const DropdownContainer = styled.div`
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: #fff;
+  box-shadow: 0px 8px 28px 0px rgba(13, 25, 133, 0.13);
 `;
 
 const SelectedItemsContainer = styled.div`

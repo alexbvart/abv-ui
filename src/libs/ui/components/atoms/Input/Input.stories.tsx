@@ -6,7 +6,10 @@ import { Input } from './Input';
 const meta: Meta<typeof Input> = {
   title: 'Atoms/Input',
   component: Input,
-  // Define los controles para las props del componente Input
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
   argTypes: {
     type: {
       control: 'text',
