@@ -56,7 +56,7 @@ const dataBody = [
 
 // Historia por defecto
 export const Default: Story = {
-  render: (args) => (
+  render: () => (
     <Table>
       <Table.Head>
         <Table.Tr>
@@ -82,9 +82,10 @@ export const Default: Story = {
 
 // Historia con columnas personalizadas
 export const CustomColumns: Story = {
-  render: (args) => {
+  render: () => {
     const [customData, setCustomData] = useState(dataBody);
-
+    console.log(setCustomData);
+    
     return (
       <Table>
         <Table.Head>

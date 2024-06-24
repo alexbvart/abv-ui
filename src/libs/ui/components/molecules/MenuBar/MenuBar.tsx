@@ -1,7 +1,6 @@
 // Menubar.tsx
-import React, { FC, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import styled from "styled-components";
-import clsx from "clsx";
 
 // Styled Components
 const MenubarWrapper = styled.div`

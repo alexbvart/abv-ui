@@ -1,30 +1,142 @@
-# React + TypeScript + Vite
+# ABV Component Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Este proyecto es una biblioteca de componentes de React desarrollada utilizando las mejores prácticas y herramientas modernas. Incluye componentes estilizados con `styled-components`, soporta Storybook para la visualización de componentes, y está configurada para fácil despliegue en Netlify.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Sitios en Producción
 
-## Expanding the ESLint configuration
+- **Aplicación:** [Visitar la aplicación](https://6679aed439fd8c0441fa4996--helpful-crostata-bf480a.netlify.app/apps)
+- **Storybook:** [Visitar Storybook](https://illustrious-cocada-ec7b4a.netlify.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Requisitos Previos
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+Asegúrate de tener instalados los siguientes requisitos en tu entorno de desarrollo:
+
+- Node.js (versión 16 o superior recomendada)
+- npm o Yarn
+
+---
+
+## Instalación
+
+Sigue los pasos a continuación para instalar las dependencias del proyecto:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/abv-component.git
+   ```
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd abv-component
+   ```
+
+3. Instala las dependencias usando npm o Yarn:
+   ```bash
+   npm install
+   ```
+   o
+   ```bash
+   yarn install
+   ```
+
+---
+
+## Scripts Disponibles
+
+### Levantar el Proyecto en Local
+
+Para levantar la aplicación en un entorno de desarrollo local:
+
+```bash
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+o
+
+```bash
+yarn dev
+```
+
+Esto iniciará un servidor de desarrollo utilizando Vite, y la aplicación estará disponible en `http://localhost:3000`.
+
+### Levantar Storybook en Local
+
+Para iniciar Storybook y ver los componentes de la biblioteca:
+
+```bash
+npm run storybook
+```
+
+o
+
+```bash
+yarn storybook
+```
+
+Esto abrirá Storybook en `http://localhost:6006`, donde podrás navegar y ver los diferentes componentes.
+
+---
+
+## Herramientas y Tecnologías
+
+El proyecto utiliza las siguientes tecnologías y herramientas:
+
+- **React**: Biblioteca principal para la construcción de interfaces de usuario.
+- **TypeScript**: Para tipado estático y mejoras de desarrollo.
+- **Styled-components**: Para estilos CSS-in-JS.
+- **Storybook**: Para el desarrollo y documentación de componentes.
+- **Vite**: Como herramienta de construcción y servidor de desarrollo rápido.
+- **ESLint**: Para el linting del código.
+- **Testing Library**: Para pruebas de componentes de React.
+- **clsx**: Para el manejo de clases condicionales.
+
+---
+
+## Contribuir
+
+Estamos encantados de recibir contribuciones. Por favor, sigue las siguientes pautas para contribuir:
+
+1. **Clona el Repositorio:**
+
+   ```bash
+   git clone https://github.com/tu-usuario/abv-component.git
+   ```
+
+2. **Crea una Nueva Rama para tu Funcionalidad o Corrección de Error:**
+
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+
+3. **Haz tus Cambios y Realiza un Commit:**
+
+   ```bash
+   git commit -m "Añadida nueva funcionalidad"
+   ```
+
+4. **Envía tus Cambios a tu Repositorio:**
+
+   ```bash
+   git push origin feature/nueva-funcionalidad
+   ```
+
+5. **Abre un Pull Request en GitHub:**
+   - Describe claramente tus cambios y por qué deberían ser fusionados.
+
+---
+
+## Soporte
+
+Si encuentras algún problema o tienes preguntas, por favor abre un [issue en GitHub](https://github.com/tu-usuario/abv-component/issues).
+
+---
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.

@@ -1,5 +1,5 @@
 // iPhoneMock.tsx
-import React, { FC, ReactNode } from "react";
+import { FC, ReactNode } from "react";
 import styled from "styled-components";
 
 // Estilos para el mock de iPhone 
@@ -24,7 +24,7 @@ const PhoneContainer = styled.div`
 `;
 
 // Estilos para el notch (simulación de la muesca en la parte superior)
-const Notch = styled.div`
+export const Notch = styled.div`
   position: absolute;
   top: 0;
   left: 50%;

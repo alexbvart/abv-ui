@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { AbvButton } from './Button';
-
+import { ButtonProps } from './Button.types';
 const meta = {
   title: 'Atoms/Button',
   component: AbvButton,
@@ -52,10 +52,10 @@ export const Small : Story = {
   }
 };
 
-export const Custom : Story = {
-  args: {
-    label: 'Custom Class Button',
-    type: 'primary',
-    className: 'pink-bg'
-  }
-};
+export const Custom : Story = (args:ButtonProps) => (
+  <AbvButton {...args} />
+);
+Custom.args = {
+  label: 'Custom Class Button',
+  className: 'pink-bg'
+}

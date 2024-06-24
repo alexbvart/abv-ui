@@ -42,19 +42,6 @@ const OptionItem = styled.div<{ isSelected: boolean }>`
   }
 `;
 
-const SearchInput = styled.input`
-  width: 100%;
-  padding: 8px;
-  border: none;
-  border-bottom: 1px solid #ccc;
-  outline: none;
-  box-sizing: border-box;
-
-  &:focus {
-    border-bottom: 1px solid dodgerblue;
-  }
-`;
-
 // Types for props and state
 type OptionProps  = {
   value: string;

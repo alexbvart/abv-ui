@@ -9,7 +9,7 @@ const meta: Meta<typeof AbvToast> = {
     type: 'info',
     message: 'This is an info toast message!',
     duration: 5000,
-    onClose: () => alert('Toast closed'), // acción simulada para Storybook
+    onClose: () => {}, // acción simulada para Storybook
   },
   parameters: {
     layout: 'centered',

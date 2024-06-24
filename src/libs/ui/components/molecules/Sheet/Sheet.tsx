@@ -224,7 +224,7 @@ const SheetFooter: FC<SheetFooterProps> = ({ children, className }) => (
 );
 
 // Componente `SheetClose` para cerrar el `Sheet`
-const SheetClose: FC<SheetCloseProps> = ({ children, asChild = false }) => {
+const SheetClose: FC<SheetCloseProps> = ({ children }) => {
   const context = useContext(SheetContext);
   if (!context) throw new Error("SheetClose must be used within a Sheet");
   return React.cloneElement(
