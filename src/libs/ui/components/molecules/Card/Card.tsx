@@ -2,6 +2,7 @@
 import { FC, HTMLAttributes, ReactNode } from "react";
 import styled, { css } from "styled-components";
 import clsx from "clsx";
+import { COLOR_BASE } from "../../../../common/constants";
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -25,6 +26,7 @@ const StyledCard = styled.div`
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
+  color: ${COLOR_BASE.ACTIVE};
 `;
 const ContentContainer = styled.div`
   position: relative;
@@ -39,7 +41,6 @@ const ContentContainer = styled.div`
   z-index: 1;
   gap: 4px;
 
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -67,7 +68,6 @@ interface CardHeaderProps extends HTMLAttributes<HTMLDivElement> {
 const StyledHeader = styled.div`
   justify-content: flex-start;
   margin-bottom: auto;
-  /* flex: 1; */
 `;
 
 const CardHeader: FC<CardHeaderProps> = ({ className, children }) => (

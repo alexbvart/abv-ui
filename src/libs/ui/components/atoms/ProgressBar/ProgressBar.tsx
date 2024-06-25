@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { COLOR_BASE } from "../../../../common/constants";
 
 export const ProgressBarContainer = styled.div`
   width: 100%;
   height: 20px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
-  background: rgba(255, 255, 255, 0.5);
+  background: ${COLOR_BASE.INACTIVE_BG};
   backdrop-filter: blur(5px);
   border-radius: 10px;
   overflow: hidden;
@@ -13,10 +15,10 @@ export const ProgressBarContainer = styled.div`
 `;
 
 export const ProgressBarFillStyled = styled.div<{ percentage: number }>`
-  /* background-color: var(--color-active); */
-  background-color: #007aff;
+  background-color: ${COLOR_BASE.INACTIVE};
   width: ${(props) => props.percentage}%;
   height: 100%;
+  color: ${COLOR_BASE.ACTIVE};
 `;
 
 export const PercentageTextStyled = styled.div`

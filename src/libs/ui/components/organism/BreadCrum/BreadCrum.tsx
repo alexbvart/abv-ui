@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 // Styled Components
 const BreadcrumbWrapper = styled.nav`
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   align-items: center;
   font-size: 14px;

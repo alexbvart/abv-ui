@@ -1,6 +1,7 @@
 import { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
+import { COLOR_BASE } from '../../../../common/constants';
 /**
  * Estilos para el Navbar
  */
@@ -39,7 +40,7 @@ const StyledNavbarItem = styled.div`
   padding: 12px 16px;
   cursor: pointer;
   &:hover {
-    background-color: var(--color-active);
+    background-color: ${COLOR_BASE.ACTIVE};;
 ;
   }
 `;

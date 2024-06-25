@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import clsx from 'clsx';
 import { ButtonProps } from './Button.types';
-
+import { COLOR_BASE } from "../../../../common/constants";
 const StyledButton = styled.button<{ type: ButtonProps['type']; size: ButtonProps['size'] }>`
   padding: ${({ size }) => (size === 'small' ? '5px 10px' : size === 'large' ? '15px 30px' : '10px 20px')};
   font-size: ${({ size }) => (size === 'small' ? '0.8rem' : size === 'large' ? '1.2rem' : '1rem')};
@@ -9,14 +9,15 @@ const StyledButton = styled.button<{ type: ButtonProps['type']; size: ButtonProp
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius:  8px;
+  color: ${COLOR_BASE.TEXT};
 
    &.btn-primary {
-     background-color: #007bff;
-     color: white;
+     color: ${COLOR_BASE.ACTIVE};
+     background-color: ${COLOR_BASE.INACTIVE};
    }
 
    &.btn-secondary {
-     background-color: #6c757d;
+     background-color: ${COLOR_BASE.TEXT};
      color: white;
    }
 

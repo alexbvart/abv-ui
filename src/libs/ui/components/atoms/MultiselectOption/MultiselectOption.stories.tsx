@@ -163,7 +163,7 @@ export const SelectAll: Story = () => {
 
   return (
     <div>
-      <AbvButton onClick={handleSelectAll}>Select All</AbvButton>
+      <AbvButton type="secondary" onClick={handleSelectAll}>Select All</AbvButton>
       <AbvMultiSelectDropdown selectedValues={selected} onChange={setSelected}>
         {allOptions.map((option) => (
           <AbvOption key={option} value={option.toLowerCase()} label={option} />

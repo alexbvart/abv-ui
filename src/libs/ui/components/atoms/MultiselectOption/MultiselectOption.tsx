@@ -1,9 +1,11 @@
 import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
 import { Input } from '../Input';
+import { COLOR_BASE } from '../../../../common/constants';
 
 // Styled components for custom styling
 const DropdownContainer = styled.div`
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   position: relative;
   width: 300px;
   margin: 10px;
@@ -11,6 +13,7 @@ const DropdownContainer = styled.div`
   border-radius: 4px;
   background-color: #fff;
   box-shadow: 0px 8px 28px 0px rgba(13, 25, 133, 0.13);
+  color: ${COLOR_BASE.ACTIVE};
 `;
 
 const SelectedItemsContainer = styled.div`
@@ -20,11 +23,12 @@ const SelectedItemsContainer = styled.div`
 `;
 
 const SelectedItem = styled.div`
-  background-color: #f0f0f0;
+  background-color: ${COLOR_BASE.INACTIVE_BG};
   color: #333;
   padding: 3px 8px;
-  border-radius: 3px;
+  border-radius: 8px;
   margin: 2px;
+  border: 1px solid ${COLOR_BASE.INACTIVE};
 `;
 
 const OptionListContainer = styled.div`
@@ -35,10 +39,10 @@ const OptionListContainer = styled.div`
 const OptionItem = styled.div<{ isSelected: boolean }>`
   padding: 8px;
   cursor: pointer;
-  background-color: ${props => (props.isSelected ? '#cce4ff' : 'transparent')};
+  background-color: ${props => (props.isSelected ? `${COLOR_BASE.INACTIVE};` : 'transparent')};
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${COLOR_BASE.INACTIVE_BG};
   }
 `;
 

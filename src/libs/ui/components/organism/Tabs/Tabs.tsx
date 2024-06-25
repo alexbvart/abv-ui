@@ -8,6 +8,7 @@ import {
 } from "react";
 import styled, { css } from "styled-components";
 import clsx from "clsx";
+import { COLOR_BASE } from "../../../../common/constants";
 
 // Styled Components
 const TabsWrapper = styled.div`
@@ -48,7 +49,7 @@ const TabButton = styled.button<{ isActive: boolean; className?: string, disable
     return css`
       color: ${props.isActive
         ? "var(--color-active)"
-        : "var(--color-text-base)"};
+        : `${COLOR_BASE.TEXT}`};
       border-bottom-color: ${props.isActive
         ? "var(--color-active)"
         : "var(--color-transparent)"};

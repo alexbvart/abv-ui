@@ -1,5 +1,5 @@
 // Tabs.stories.tsx
-import { Meta, StoryFn } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Tabs } from './Tabs';
 
 const meta : Meta<typeof Tabs> = {
@@ -13,7 +13,7 @@ const meta : Meta<typeof Tabs> = {
 
 export default meta;
 
-type Story = StoryFn<typeof Tabs>;
+type Story = StoryObj<typeof Tabs>;
 
 export const DefaultTab: Story = () => (
   <Tabs initialActiveTab={0}>

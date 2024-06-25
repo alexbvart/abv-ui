@@ -1,16 +1,20 @@
 import { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import clsx from 'clsx';
+import { COLOR_BASE } from '../../../../common/constants';
 
 // Styled Components
 const StyledTable = styled.table`
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   width: 100%;
   border-collapse: collapse;
-  background-color: #ffffff;
+  background-color:  ${COLOR_BASE.TRANSPARENT};
+  color: ${COLOR_BASE.ACTIVE};
+
 `;
 
 const StyledThead = styled.thead`
-  background-color: #f9f9f9;
+  background-color: ${COLOR_BASE.INACTIVE_BG};
 `;
 
 const StyledTh = styled.th<{ minWidth?: string }>`
@@ -23,7 +27,7 @@ const StyledTh = styled.th<{ minWidth?: string }>`
 
 const StyledTr = styled.tr`
   &:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: ${COLOR_BASE.INACTIVE_BG};
   }
 `;
 

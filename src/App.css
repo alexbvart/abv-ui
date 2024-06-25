@@ -1,45 +1,58 @@
 #root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  --color-text-base: #040404;
-  --color-active: #007aff;
+  --color-text-base: #282828;
+  --color-active: #c1f7b6;
   --color-inactive: #000;
   --color-transparent: transparent;
   --bike-color: #daff85;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
   color: var(--color-text-base);
+
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-  /* CSS Reset */
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Esto asegura que las fuentes y otros estilos sean consistentes */
-  body {
-    font-family: 'Arial', sans-serif; /* Puedes cambiar esto a la fuente que prefieras */
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+/* Esto asegura que las fuentes y otros estilos sean consistentes */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  /* Asegura que los elementos de contenedor tengan el ancho completo */
-  html{
-    width: 100vw;
-    height: 100vh;
-    box-sizing: border-box;
-
-  }
-   body, #root {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Asegura que los elementos de contenedor tengan el ancho completo */
+html {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .pink-bg {
   background-color: #ff69b4; /* Ejemplo de estilo personalizado */
@@ -50,14 +63,14 @@
   text-transform: uppercase;
 }
 
-.flex-col{
+.flex-col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
 
-.color-white{
+.color-white {
   color: white;
 }
 
@@ -76,23 +89,22 @@
   }
 }
 
-.custom-card{
+.custom-card {
   width: 300px;
   max-width: 350px;
   height: 450px;
 }
 
-.custom-card2{
+.custom-card2 {
   width: 400px;
   max-width: 350px;
   height: 600;
 }
-.flex-row{
+.flex-row {
   display: flex;
   /* justify-content: center; */
   align-items: start;
 }
-
 
 /* flex: 1;
 padding: 10px 15px;
@@ -107,8 +119,7 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   background-color: #e0e0e0;
 } */
 
-
-.new-tab{
+.new-tab {
   flex: 1;
   height: 60px;
   padding: 10px 15px;
@@ -117,14 +128,15 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   font-size: 14px;
   background: white;
   color: black;
-  border-radius: 16px; 
+  border-radius: 16px;
 
   &.active {
-  color: white;
+    color: white;
     background: rgb(55, 128, 0);
-}}
+  }
+}
 
-.flex{
+.flex {
   display: flex;
 }
 
@@ -132,8 +144,7 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   border-radius: 80px;
 }
 
-
-.airbnb-tab{
+.airbnb-tab {
   flex: 1;
   height: 60px;
   padding: 10px 15px;
@@ -149,7 +160,8 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   gap: 2px;
   &.active {
     border-bottom-color: black;
-}}
+  }
+}
 
 .stickyNavbar {
   position: sticky;
@@ -173,28 +185,38 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
 
   /* min-height: 450px; */
   /* aspect-ratio: 16 / 9; */
-  margin: 80px 100px ;
+  margin: 80px 100px;
 }
 
-.absolute-card{
+.absolute-card {
   position: absolute;
 }
 
-.bike-title{
+.bike-title {
   font-size: 28px !important;
 }
 
-.bike-card{
+.bike-card {
   margin-bottom: 16px;
   border-radius: 50px !important;
   border: 1px solid rgb(239, 236, 236) !important;
-  background: radial-gradient(circle at 80% 65%,  white, rgba(193, 193, 193, 0.5), rgba(69, 14, 14, 0.033));
+  background: radial-gradient(
+    circle at 80% 65%,
+    white,
+    rgba(193, 193, 193, 0.5),
+    rgba(69, 14, 14, 0.033)
+  );
   &:hover {
-    background: radial-gradient(circle at 80% 65%,  white, #2e33231e, rgba(128, 128, 128, 0.033));
+    background: radial-gradient(
+      circle at 80% 65%,
+      white,
+      #2e33231e,
+      rgba(128, 128, 128, 0.033)
+    );
   }
 }
 
-.bike-tab{
+.bike-tab {
   flex: 1;
   height: 60px;
   padding: 10px 18px;
@@ -204,20 +226,20 @@ border-bottom-color: ${({ isActive }) => (isActive ? '#007aff' : 'transparent')}
   background: white;
   /* color: black; */
   color: var(--color-text-base);
-  border-radius: 24px; 
+  border-radius: 24px;
 
   &.active {
-  /* color: white; */
-    background: var(--bike-color)
-}}
+    /* color: white; */
+    background: var(--bike-color);
+  }
+}
 
 .bike-stickyNavbar {
   position: sticky;
   top: 40px;
   z-index: 100; /* This ensures the navbar stays on top of other elements */
   border-bottom: 1px solid transparent !important;
-  padding: 8px 4px; 
+  padding: 8px 4px;
   background: rgba(255, 254, 254, 0.5) !important;
   backdrop-filter: blur(5px);
 }
-

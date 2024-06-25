@@ -1,9 +1,10 @@
 import { BrowserRouter as Router } from "react-router-dom";
 import { AppRoutes } from "../../router";
-import "../../App.css";
+import GlobalStyle from '../../../GlobalStyle';
 function App() {
   return (
     <Router>
+      <GlobalStyle />
       <AppRoutes />
     </Router>
   );
