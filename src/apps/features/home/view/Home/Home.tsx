@@ -1,12 +1,12 @@
-import { MotoHome } from '../../../motobike/view'
-import { AirbnbHomeView } from '../../../airbnb/View/Home'
+import { MotoHome } from "../../../motobike/view";
+import { AirbnbHomeView } from "../../../airbnb/View/Home";
 
 export const HomeMain = () => {
   return (
     <>
-    <AirbnbHomeView />  
-    <MotoHome />
-    <AirbnbHomeView />
+      <AirbnbHomeView />
+      <MotoHome />
+      <AirbnbHomeView />
     </>
-  )
-}
+  );
+};

@@ -40,7 +40,7 @@ const StyledNavbarItem = styled.div`
   padding: 12px 16px;
   cursor: pointer;
   &:hover {
-    background-color: ${COLOR_BASE.ACTIVE};;
+    background-color: ${COLOR_BASE.ACTIVE};
 ;
   }
 `;

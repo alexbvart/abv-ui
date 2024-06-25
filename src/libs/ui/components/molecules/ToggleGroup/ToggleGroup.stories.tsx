@@ -6,22 +6,33 @@ const meta: Meta<typeof ToggleGroup> = {
   title: "Molecules/ToggleGroup",
   component: ToggleGroup,
   parameters: {
-    // layout: "centered",
+    layout: "centered",
   },
   tags: ["autodocs"],
+  args: {
+    type: "single",
+  },
+  argTypes: {
+    type: {
+      control: {
+        type: "radio",
+        options: ["single", "multiple"],
+      },
+    },
+  },
 };
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const SingleSelection: Story = (args: ToggleGroupProps) => (
+export const SingleSelection: Story = (args: ToggleGroupProps) => (
   <ToggleGroup {...args}>
-    <ToggleGroup.Item value="carro" aria-label="Toggle card">
+    <ToggleGroup.Item value="carro" ariaLabel="Toggle card">
       Carro
     </ToggleGroup.Item>
-    <ToggleGroup.Item value="moto" aria-label="Toggle bike">
+    <ToggleGroup.Item value="moto" ariaLabel="Toggle bike">
       Moto
     </ToggleGroup.Item>
-    <ToggleGroup.Item value="barco" aria-label="Toggle card">
+    <ToggleGroup.Item value="barco" ariaLabel="Toggle card">
       Barco
     </ToggleGroup.Item>
   </ToggleGroup>
@@ -30,15 +41,15 @@ SingleSelection.args = {
   type: "single",
 };
 
-const MultipleSelection: Story = (args: ToggleGroupProps) => (
+export const MultipleSelection: Story = (args: ToggleGroupProps) => (
   <ToggleGroup {...args}>
-    <ToggleGroup.Item value="carro" aria-label="Toggle card">
+    <ToggleGroup.Item value="carro" ariaLabel="Toggle card">
       Carro
     </ToggleGroup.Item>
-    <ToggleGroup.Item value="moto" aria-label="Toggle bike">
+    <ToggleGroup.Item value="moto" ariaLabel="Toggle bike">
       Moto
     </ToggleGroup.Item>
-    <ToggleGroup.Item value="barco" aria-label="Toggle card">
+    <ToggleGroup.Item value="barco" ariaLabel="Toggle card">
       Barco
     </ToggleGroup.Item>
   </ToggleGroup>

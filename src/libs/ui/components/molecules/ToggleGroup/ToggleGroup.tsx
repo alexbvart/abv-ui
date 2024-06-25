@@ -1,13 +1,13 @@
 // ToggleGroup.tsx
 import React, {
   useState,
-  ReactNode,
   useEffect,
 } from "react";
 import clsx from "clsx";
 import styled from "styled-components";
 import { ToggleGroupItemChild, ToggleGroupItemProps, ToggleGroupProps } from "./ToggleGroup.types";
 import { ToggleContext, useToggleGroupContext } from "./useToggleGroup";
+import { COLOR_BASE } from "../../../../common/constants";
 
 const StyledToggleGroup = styled.div`
   display: flex;
@@ -61,13 +61,16 @@ const StyledToggleGroupItem = styled.button<{ isSelected: boolean }>`
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  background-color: ${({ isSelected }) => (isSelected ? "#007bff" : "#f1f1f1")};
-  color: ${({ isSelected }) => (isSelected ? "white" : "black")};
+  background-color: ${({ isSelected }) => (isSelected ? `${COLOR_BASE.INACTIVE}` : `${COLOR_BASE.TRANSPARENT}`)};
   border-radius: 5px;
+  color: ${COLOR_BASE.TEXT};
+  border: 1px solid ${({ isSelected }) => (isSelected ? `${COLOR_BASE.INACTIVE}` : `${COLOR_BASE.INACTIVE_BG}`)};
 
   &:hover {
     background-color: ${({ isSelected }) =>
-      isSelected ? "#0056b3" : "#e0e0e0"};
+      isSelected ? `${COLOR_BASE.INACTIVE}` : `${COLOR_BASE.INACTIVE_BG}`};
+    border: 1px solid ${COLOR_BASE.ACTIVE};
+    
   }
 `;
 
